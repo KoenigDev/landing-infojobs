@@ -121,25 +121,25 @@ Este proyecto es una landing page para InfoJobs, diseñada para proporcionar una
 Clona el proyecto
 
 ```bash
-  git clone https://github.com/midudev/landing-infojobs.git
+git clone https://github.com/midudev/landing-infojobs.git
 ```
 
 Dirigete al directorio del proyecto
 
 ```bash
-  cd landing-infojobs
+cd landing-infojobs
 ```
 
 Instala las dependencias
 
 ```bash
-  npm install
+npm install
 ```
 
 Inicia el servidor
 
 ```bash
-  npm run start
+npm run start
 ```
 
 
@@ -148,8 +148,11 @@ Inicia el servidor
 Para correr este proyecto, necesitarás agregar las siguientes variable de entorno `API_INFOJOBS_TOKEN` en tu archivo .env
 
 > [!NOTE]
-> Puedes conseguir el token en esta url [Developer Site InfoJobs](https://developer.infojobs.net/)
+> Puedes conseguir el token en esta url [Developer Site InfoJobs](https://developer.infojobs.net/).
+> Debes loguearte con tu cuenta infojobs, y al crear una app, te darán tus credenciales.
 
+> [!WARNING]
+> Deshabilitado en este momento.
 
 ## Contribuciones
 

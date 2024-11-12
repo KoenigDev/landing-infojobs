@@ -1,51 +1,72 @@
 ---
-import AppStore from "@icons/AppStore.astro";
-import Facebook from "@icons/Facebook.astro";
-import GooglePlay from "@icons/GooglePlay.astro";
-import TikTok from "@icons/TikTok.astro";
-import Twitter from "@icons/Twitter.astro";
-import YouTube from "@icons/YouTube.astro";
-import FollowUsLink from "./FollowUsLink.astro";
+import FollowUsLink from "@components/FollowUsLink.astro";
+import Icon from "./ui/Icon.astro";
+
+const hoverSocialNetworks = "md:transition-transform md:hover:scale-110";
+const hoverStoreApps = "md:transition-opacity md:duration-150 md:ease-in-out md:hover:opacity-90";
 ---
 
-<section
-  class="bg-[#F5F5F5] flex flex-col items-center justify-between py-4 lg:p-10 lg:flex-row"
->
+
+<section class="flex flex-col items-center justify-between md:flex-row md:p-10">
   <article
-    class="w-full flex items-center justify-center gap-2 py-4 flex-wrap lg:justify-start"
+    class="w-full flex items-center justify-center gap-2 py-4 flex-wrap md:justify-start"
   >
-    <h4 class="tracking-[0.38px] text-xl leading-6 font-semibold">
+    <p class="text-xl tracking-[0.38px] leading-6 font-semibold">
       ¡Síguenos!
-    </h4>
+    </p>
 
     <span class="flex items-center gap-2">
-      <FollowUsLink href="https://www.tiktok.com/@infojobs">
-        <TikTok />
+      <FollowUsLink
+        href="https://www.tiktok.com/@infojobs"
+        class={hoverSocialNetworks}
+        socialPlatform="Visítanos en TikTok."
+      >
+        <Icon name="tiktok" />
       </FollowUsLink>
 
-      <FollowUsLink href="https://www.youtube.com/InfoJobs">
-        <YouTube />
+      <FollowUsLink
+        href="https://www.youtube.com/InfoJobs"
+        class={hoverSocialNetworks}
+        socialPlatform="Visítanos en YouTube."
+      >
+        <Icon name="youtube" />
       </FollowUsLink>
 
-      <FollowUsLink href="https://x.com/InfoJobs">
-        <Twitter />
+      <FollowUsLink
+        href="https://x.com/InfoJobs"
+        class={hoverSocialNetworks}
+        socialPlatform="Visítanos en X."
+      >
+        <Icon name="twitter" />
       </FollowUsLink>
 
-      <FollowUsLink href="https://www.facebook.com/InfoJobs">
-        <Facebook />
+      <FollowUsLink
+        href="https://www.facebook.com/InfoJobs"
+        class={hoverSocialNetworks}
+        socialPlatform="Visítanos en Facebook."
+      >
+        <Icon name="facebook" />
       </FollowUsLink>
     </span>
   </article>
 
   <article
-    class="flex items-center justify-center gap-4 pb-4 flex-wrap lg:flex-nowrap lg:pb-0"
+    class="w-full flex items-center justify-center gap-4 py-4 flex-wrap md:flex-nowrap md:p-0 md:gap-2 md:justify-end"
   >
-    <FollowUsLink href="https://infojobs.go.link/?adj_t=1b8zxouv_1bnixj2z">
-      <GooglePlay />
+    <FollowUsLink
+      href="https://infojobs.go.link/?adj_t=1b8zxouv_1bnixj2z"
+      class={hoverStoreApps}
+      socialPlatform="Visítanos en Google."
+    >
+     <Icon name="googleplay" />
     </FollowUsLink>
 
-    <FollowUsLink href="https://infojobs.onelink.me/2882600328/rjh2wn2f">
-      <AppStore />
+    <FollowUsLink
+      href="https://infojobs.onelink.me/2882600328/rjh2wn2f"
+      class={hoverStoreApps}
+      socialPlatform="Visítanos en la AppStore."
+    >
+      <Icon name="appstore" />
     </FollowUsLink>
   </article>
 </section>
